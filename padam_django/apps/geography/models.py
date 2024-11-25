@@ -17,7 +17,7 @@ class Place(models.Model):
 class BusStop(models.Model):
     name = models.CharField("Name of the bus stop", max_length=50)
 
-    bus_stop = models.ForeignKey(Place, on_delete=models.CASCADE, related_name='place')
+    bus_stop = models.ForeignKey(Place, on_delete=models.CASCADE, related_name='bus_stop')
 
     class Meta:
         # Two bus stops cannot have the same name
